@@ -9,6 +9,15 @@ void main()
     int c;
 
     while ((c = getchar()) != EOF) {
-        if (c == '\t') {}
+        if (c == ' ') {
+            putchar(c);
+            while ((c = getchar()) == ' ' && c != EOF) {        
+                ; 
+            }
+        }
+        if (c == EOF) {
+            break;
+        }
+        putchar(c);
     }
 }
