@@ -6,9 +6,20 @@
 
 void main()
 {
-    int c;
+    int c, blanks;
+
+    blanks = 0;
 
     while ((c = getchar()) != EOF) {
-        if (c == '\t') {}
+        if (c == ' ') {
+            ++blanks;
+            if (blanks >= 2) {
+                c = '\b';
+                --blanks;
+            }
+        } else {
+            blanks = 0;
+        }
+        putchar(c);
     }
 }
