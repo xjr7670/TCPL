@@ -4,12 +4,9 @@ int atoi(char s[]);
 
 int main()
 {
-    char s[5];
+    char s[5] = "12345";
     int i;
 
-    for (i = 0; i < 10; i++) {
-        scanf("%c", &s[i]);
-    }
     i = atoi(s);
     printf("%d\n", i);
 }
@@ -21,7 +18,7 @@ int atoi(char s[])
 
     n = 0;
     printf("%d\n", n);
-    for (i = 0; s[i] >= 'a' && s[i] <= 'z'; ++i) {
+    for (i = 0; s[i] >= '0' && s[i] <= '9'; ++i) {
         n = 10 * n + (s[i] - '0');
         printf("%d \n", n);
     }
